@@ -10,6 +10,8 @@ import binding_demo.coderzheaven.com.bindingdemo.databinding.ActivityMainBinding
 public class MainActivity extends AppCompatActivity {
 
     User user;
+    User2 user2;
+    User3 user3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,15 +22,36 @@ public class MainActivity extends AppCompatActivity {
         user = new User("Coderz", "Heaven");
         binding.setUser(user);
 
-        binding.b1.setText("Click Me");
+        binding.b1.setText("Update");
         binding.b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                user.setFirstName("New Name");
-                user.setLastName("New Updated Name");
+
+                // Updatin BaseObservable
+                user.setFirstName("New Updated First Name");
+                user.setLastName("New Updated Last Name");
+
+                // Updating ObservableFields
+                user2.firstName.set("Apple");
+                user2.lastName.set("iOS");
+
+                // Updating  Observable Collections
+                user3.name.put(0, "Heaven");
+
             }
         });
 
+        // ObservableFields
+        user2 = new User2();
+        user2.firstName.set("Google");
+        user2.lastName.set("Android");
+        binding.setUser2(user2);
+
+        // Observable Collections
+        user3 = new User3();
+        user3.name.put(0, "Coderz");
+        user3.name.put(1, "Heaven");
+        binding.setUser3(user3);
 
     }
 

@@ -12,6 +12,15 @@
         <variable
             name="user"
             type="binding_demo.coderzheaven.com.bindingdemo.User" />
+
+        <variable
+            name="user2"
+            type="binding_demo.coderzheaven.com.bindingdemo.User2" />
+
+        <import type="android.databinding.ObservableMap"/>
+        <variable
+            name="user3"
+            type="binding_demo.coderzheaven.com.bindingdemo.User3" />
     </data>
 
 
@@ -30,11 +39,27 @@
             android:layout_height="wrap_content"
             android:text="@{user.lastName}" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user2.firstName}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user2.lastName}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user3.name.get(0)}" />
+
+
+
         <Button
             android:id="@+id/b1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-           />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
