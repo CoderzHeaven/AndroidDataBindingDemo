@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 user.setFirstName("New Name");
-                user.setLastName("New Last Name");
+                user.setLastName("New Updated Name");
             }
         });
 
