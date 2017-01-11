@@ -7,7 +7,7 @@ import android.view.View;
 
 import binding_demo.coderzheaven.com.bindingdemo.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MyHandler {
 
     User user;
     User2 user2;
@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(this, R.layout.activity_main);
         user = new User("Coderz", "Heaven");
         binding.setUser(user);
-
         binding.b1.setText("Update");
         binding.b1.setOnClickListener(new View.OnClickListener() {
             @Override

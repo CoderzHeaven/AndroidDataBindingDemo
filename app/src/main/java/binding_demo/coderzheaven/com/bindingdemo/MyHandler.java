@@ -5,7 +5,7 @@ import android.widget.Button;
 
 public class MyHandler {
 
-    public void bb(View view){
+    public void onClick(View view){
         ((Button)view).setText("New Text");
     }
 }
