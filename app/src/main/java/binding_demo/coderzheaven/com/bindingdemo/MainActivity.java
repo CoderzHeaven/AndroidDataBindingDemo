@@ -7,7 +7,7 @@ import android.view.View;
 
 import binding_demo.coderzheaven.com.bindingdemo.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity implements MyHandler {
+public class MainActivity extends AppCompatActivity {
 
     User user;
     User2 user2;

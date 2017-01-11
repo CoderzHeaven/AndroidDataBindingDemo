@@ -5,7 +5,6 @@
 
     <data>
 
-        <import type="android.view.View"/>
         <variable
             name="handler"
             type="binding_demo.coderzheaven.com.bindingdemo.MyHandler" />
@@ -62,7 +61,7 @@
 
         <Button
             android:id="@+id/b2"
-            android:onClick="@{handler.onClick}"
+            android:onClick="@{handler::onClick}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
